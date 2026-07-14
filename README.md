@@ -2,17 +2,7 @@
 
 Official website of **LEFNOUN**.
 
-Engineering Intelligence for Better Semiconductor Design Decisions.
-
----
-
-## About
-
-The LEFNOUN website is the public face of the organization.
-
-Its purpose is to present our research, engineering philosophy, flagship platforms, publications, and future technologies.
-
----
+**Engineering Intelligence for Better Semiconductor Design Decisions.**
 
 ## Technologies
 
@@ -22,42 +12,12 @@ Its purpose is to present our research, engineering philosophy, flagship platfor
 - GitHub Pages
 - Cloudflare
 
----
+## Local Preview
 
-## Website Structure
-
-```
-website/
-│
-├── index.html
-├── css/
-├── js/
-├── assets/
-│   ├── logo/
-│   ├── images/
-│   ├── icons/
-│   └── documents/
-└── favicon.ico
+```bash
+python3 -m http.server 8000
 ```
 
----
+Then open `http://localhost:8000`.
 
-## Main Sections
-
-- Home
-- About
-- Research
-- PDIF
-- Vision
-- Contact
-
----
-
-## Status
-
-🚧 Under Development
-
----
-
-© LEFNOUN
-Engineering Intelligence for Better Semiconductor Design Decisions.
+© LEFNOUN. All rights reserved.
