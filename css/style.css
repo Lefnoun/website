@@ -186,6 +186,9 @@
   .project-grid {
     grid-template-columns: 1fr;
   }
+   .badges {
+    justify-content: center;
+  }
 }
 
 * {
