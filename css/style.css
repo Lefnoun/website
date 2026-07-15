@@ -6,6 +6,81 @@
 
 /* ---------- Base ---------- */
 /* Add these rules near the end of css/style.css, before media queries if possible */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.badges span {
+  padding: 8px 12px;
+  border: 1px solid rgba(91, 160, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  font-size: 0.82rem;
+}
+
+.badges span::before {
+  content: "✓";
+  margin-right: 7px;
+  color: #22d3ee;
+  font-weight: 800;
+}
+
+.orbit {
+  position: relative;
+}
+
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ring-two {
+  inset: 16%;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+}
+
+.signal-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 18px #22d3ee;
+}
+
+.dot-one {
+  top: 7%;
+  left: 51%;
+}
+
+.dot-two {
+  right: 8%;
+  bottom: 28%;
+}
+
+.dot-three {
+  left: 18%;
+  bottom: 12%;
+}
+
+.chip {
+  animation: chipFloat 7s ease-in-out infinite;
+}
+
+@keyframes chipFloat {
+  0%,
+  100% {
+    transform: rotate(-5deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-2deg) translateY(-10px);
+  }
+}
 .philosophy {
   background: #ffffff;
 }
