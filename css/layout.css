@@ -69,7 +69,11 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
+}
+
+.header-inner {
+  gap: 26px;
 }
 
 .desktop-nav a {
