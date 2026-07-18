@@ -295,3 +295,50 @@
     justify-content: center;
   }
 }
+@media (max-width: 960px) {
+  .library-pdif-body {
+    grid-template-columns: 1fr;
+  }
+
+  .library-pdif-content {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 620px) {
+  .library-pdif-feature {
+    padding: 22px;
+  }
+
+  .library-pdif-header {
+    flex-direction: column;
+  }
+
+  .library-pdif-visual {
+    min-height: 360px;
+  }
+
+  .pdif-orbit-one {
+    width: 210px;
+    height: 210px;
+  }
+
+  .pdif-orbit-two {
+    width: 285px;
+    height: 285px;
+  }
+
+  .pdif-feature-core {
+    width: 145px;
+    height: 145px;
+  }
+
+  .pdif-feature-core strong {
+    font-size: 2rem;
+  }
+
+  .pdif-feature-label {
+    padding: 7px 10px;
+    font-size: 0.7rem;
+  }
+}
