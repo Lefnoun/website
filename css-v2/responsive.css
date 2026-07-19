@@ -342,3 +342,169 @@
     font-size: 0.7rem;
   }
 }
+/* Research Page */
+
+@media (max-width: 1100px) {
+  .research-page-hero-inner,
+  .research-method-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .research-summary-panel {
+    max-width: 760px;
+  }
+
+  .research-domain-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-roadmap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .research-page-hero {
+    padding: calc(var(--header-height) + 70px) 0 78px;
+  }
+
+  .research-page-intro h1 {
+    font-size: clamp(2.7rem, 12vw, 4.1rem);
+  }
+
+  .research-domains-section,
+  .flagship-research-section,
+  .research-method-section,
+  .research-roadmap-section {
+    padding: 84px 0;
+  }
+
+  .research-domain-grid,
+  .flagship-program-grid,
+  .research-roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  .research-domain-card {
+    min-height: auto;
+  }
+
+  .research-method-layout {
+    gap: 38px;
+  }
+
+  .research-collaboration {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .research-collaboration-actions {
+    width: 100%;
+  }
+
+  .research-collaboration-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .research-summary-panel,
+  .flagship-program,
+  .research-domain-card {
+    padding: 24px;
+  }
+
+  .program-header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .research-method-steps li {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 961px) and (max-height: 850px) {
+  .research-page-hero {
+    padding-top: calc(var(--header-height) + 38px);
+    padding-bottom: 68px;
+  }
+
+  .research-page-intro h1 {
+    font-size: clamp(2.75rem, 4vw, 4rem);
+  }
+
+  .research-page-hero-inner {
+    gap: 48px;
+  }
+
+  .research-summary-panel {
+    padding: 26px;
+  }
+
+  .research-flow div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+/* Library Page */
+
+@media (max-width: 1100px) {
+  .library-page-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .library-summary-panel {
+    max-width: 760px;
+  }
+
+  .library-collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .library-page-hero {
+    padding: calc(var(--header-height) + 68px) 0 78px;
+  }
+
+  .library-page-intro h1 {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+
+  .library-collections-section {
+    padding: 84px 0;
+  }
+
+  .library-collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-collection-card {
+    min-height: 290px;
+  }
+
+  .library-contribution {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .library-contribution-actions {
+    width: 100%;
+  }
+
+  .library-contribution-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .library-summary-panel,
+  .library-collection-card {
+    padding: 24px;
+  }
+}
