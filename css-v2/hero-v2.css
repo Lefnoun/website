@@ -1,0 +1,170 @@
+from pathlib import Path
+import re
+
+src = Path("/mnt/data/Pasted code.css")
+text = src.read_text(encoding="utf-8")
+
+# Refine the main hero title so it remains strong but less dominant.
+text = text.replace(
+""".hero h1 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(2.8rem, 4.6vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}""",
+""".hero h1 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(2.75rem, 4.45vw, 4.1rem);
+  line-height: 1.01;
+  letter-spacing: -0.048em;
+}"""
+)
+
+# Upgrade the panel heading so "Version 1.0" appears as a professional badge.
+text = text.replace(
+""".panel-heading {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-secondary);
+}
+
+.system-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  box-shadow: 0 0 14px var(--color-secondary);
+}""",
+""".panel-heading {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.system-status {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 11px;
+  border: 1px solid rgba(45, 212, 191, 0.24);
+  border-radius: var(--radius-pill);
+  color: var(--color-secondary);
+  background: rgba(45, 212, 191, 0.07);
+  font-size: 0.64rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Kept for compatibility if a status dot is added later. */
+.system-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  box-shadow: 0 0 14px var(--color-secondary);
+}"""
+)
+
+# Improve readability for the updated center label "Engineering Intelligence".
+text = text.replace(
+""".chip-core span {
+  margin-top: 8px;
+  color: var(--color-text-soft);
+  font-size: 0.63rem;
+}""",
+""".chip-core span {
+  max-width: 118px;
+  margin-top: 8px;
+  color: var(--color-text-soft);
+  font-size: 0.66rem;
+  line-height: 1.25;
+  text-align: center;
+}"""
+)
+
+# Ensure the longer capability labels fit neatly.
+text = text.replace(
+""".panel-metrics div {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.018);
+}""",
+""".panel-metrics div {
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.018);
+}"""
+)
+
+text = text.replace(
+""".panel-metrics strong {
+  color: var(--color-text-soft);
+  font-size: 0.75rem;
+}""",
+""".panel-metrics strong {
+  color: var(--color-text-soft);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}"""
+)
+
+# Keep short desktop screens compact and consistent with the new base heading size.
+text = text.replace(
+"""  .hero h1 {
+    margin-bottom: 18px;
+    font-size: clamp(2.8rem, 4.8vw, 4.55rem);
+  }""",
+"""  .hero h1 {
+    margin-bottom: 18px;
+    font-size: clamp(2.65rem, 4.25vw, 3.95rem);
+    line-height: 1.01;
+    letter-spacing: -0.045em;
+  }"""
+)
+
+# Make the compact panel metrics accommodate longer labels.
+text = text.replace(
+"""  .panel-metrics div {
+    padding: 10px;
+  }""",
+"""  .panel-metrics div {
+    min-height: 66px;
+    padding: 10px;
+  }"""
+)
+
+out = Path("/mnt/data/hero-v2-updated.css")
+out.write_text(text, encoding="utf-8")
+print(f"Created: {out}")
