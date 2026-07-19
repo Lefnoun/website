@@ -1030,3 +1030,225 @@
   flex-wrap: wrap;
   gap: 12px;
 }
+/* =========================================================
+   Library Page
+   ========================================================= */
+
+.library-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: calc(var(--header-height) + 55px) 0 82px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.library-page-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  gap: 52px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+}
+
+.library-page-intro {
+  max-width: 780px;
+}
+
+.library-page-intro h1 {
+  max-width: 820px;
+  margin-bottom: 26px;
+  font-size: clamp(2.75rem, 4.1vw, 4.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.library-page-intro h1 span {
+  display: block;
+  margin-top: 12px;
+  color: transparent;
+  background: linear-gradient(
+    100deg,
+    var(--color-primary-light),
+    var(--color-secondary),
+    var(--color-accent)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.library-page-intro > p:not(.eyebrow, .hero-identity) {
+  max-width: 680px;
+  margin-bottom: 34px;
+  color: var(--color-text-soft);
+  font-size: clamp(1.05rem, 1.35vw, 1.17rem);
+  line-height: 1.8;
+}
+
+.library-summary-panel {
+  padding: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 34, 54, 0.84),
+      rgba(7, 16, 29, 0.94)
+    );
+  box-shadow:
+    0 30px 85px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.library-summary-panel h2 {
+  margin-bottom: 28px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.library-summary-list {
+  display: grid;
+  gap: 14px;
+}
+
+.library-summary-list div {
+  position: relative;
+  padding: 18px 18px 18px 58px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.library-summary-list span {
+  position: absolute;
+  top: 19px;
+  left: 18px;
+  color: var(--color-secondary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.library-summary-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+.library-summary-list p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.library-collections-section {
+  padding: 110px 0;
+  background: rgba(9, 19, 33, 0.48);
+}
+
+.library-collection-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.library-collection-card {
+  position: relative;
+  min-height: 310px;
+  padding: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 34, 54, 0.72),
+      rgba(9, 19, 33, 0.76)
+    );
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.library-collection-card:hover {
+  border-color: var(--color-border-bright);
+  transform: translateY(-6px);
+}
+
+.library-collection-card > span {
+  display: block;
+  margin-bottom: 48px;
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.library-collection-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.library-collection-card p {
+  margin-bottom: 26px;
+  color: var(--color-text-muted);
+  line-height: 1.72;
+}
+
+.library-collection-card a {
+  position: absolute;
+  bottom: 28px;
+  left: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary-light);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.library-contribution-section {
+  padding: 45px 0 110px;
+}
+
+.library-contribution {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 44px;
+  border: 1px solid var(--color-border-bright);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(45, 212, 191, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(18, 34, 54, 0.9),
+      rgba(7, 16, 29, 0.96)
+    );
+}
+
+.library-contribution > div:first-child {
+  max-width: 720px;
+}
+
+.library-contribution h2 {
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.library-contribution p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.library-contribution-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
