@@ -621,7 +621,7 @@
 .research-page-hero {
   position: relative;
   overflow: hidden;
-  padding: calc(var(--header-height) + 95px) 0 100px;
+  padding: calc(var(--header-height) + 65px) 0 90px;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -639,10 +639,11 @@
 }
 
 .research-page-intro h1 {
+  max-width: 660px;
   margin-bottom: 28px;
-  font-size: clamp(3rem, 5.4vw, 5.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.9rem, 4.5vw, 4.6rem);
+  line-height: 1.01;
+  letter-spacing: -0.048em;
 }
 
 .research-page-intro h1 span {
